@@ -16,19 +16,24 @@ Personal Claude Code configuration.
 ```bash
 git clone git@github.com:MichaelJeffreyJoseph/claude-config.git ~/claude-config
 
-cp ~/claude-config/settings.json ~/.claude/settings.json
-cp ~/claude-config/settings.local.json ~/.claude/settings.local.json
+# Symlink settings so Claude Code writes directly into the repo
+ln -s ~/claude-config/settings.json ~/.claude/settings.json
+ln -s ~/claude-config/settings.local.json ~/.claude/settings.local.json
+
+# Copy desktop config (Claude Desktop doesn't support symlinks here)
 cp ~/claude-config/claude_desktop_config.json \
    ~/Library/Application\ Support/Claude/claude_desktop_config.json
 ```
 
 ## Syncing changes
 
-Edit files in `~/claude-config/` directly, then copy to live locations:
+`settings.json` and `settings.local.json` are symlinked — any change Claude Code makes is instantly reflected in this repo. Just commit when you want to snapshot:
 
 ```bash
-cp ~/claude-config/settings.json ~/.claude/settings.json
+cd ~/claude-config && git diff && git add -A && git commit -m "update settings" && git push
 ```
+
+`claude_desktop_config.json` is a copy and must be manually synced if changed.
 
 ## Obsidian logging
 

@@ -14,7 +14,7 @@ Personal Claude Code configuration.
 ## Setup on a new machine
 
 ```bash
-git clone git@github.com:<you>/claude-config.git ~/claude-config
+git clone git@github.com:MichaelJeffreyJoseph/claude-config.git ~/claude-config
 
 cp ~/claude-config/settings.json ~/.claude/settings.json
 cp ~/claude-config/settings.local.json ~/.claude/settings.local.json

@@ -7,6 +7,7 @@ Personal Claude Code configuration.
 | File | Live location |
 |------|--------------|
 | `settings.json` | `~/.claude/settings.json` |
+| `settings.local.json` | `~/.claude/settings.local.json` |
 | `claude_desktop_config.json` | `~/Library/Application Support/Claude/claude_desktop_config.json` |
 | `scripts/log-to-obsidian.py` | Called by Stop hook on every session end |
 
@@ -16,6 +17,7 @@ Personal Claude Code configuration.
 git clone git@github.com:<you>/claude-config.git ~/claude-config
 
 cp ~/claude-config/settings.json ~/.claude/settings.json
+cp ~/claude-config/settings.local.json ~/.claude/settings.local.json
 cp ~/claude-config/claude_desktop_config.json \
    ~/Library/Application\ Support/Claude/claude_desktop_config.json
 ```
